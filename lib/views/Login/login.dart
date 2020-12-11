@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:netflix_clone/screens/Home/widgets/netflix_tabbar.dart';
+import 'package:netflix_clone/views/Home/widgets/netflix_tabbar.dart';
 
 import '../../styles.dart';
 
@@ -29,42 +29,11 @@ class _LoginState extends State<Login> {
             crossAxisAlignment: CrossAxisAlignment.stretch,
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
-              TextField(
-                style:
-                    kTextFieldStyle.copyWith(decoration: TextDecoration.none),
-                autofocus: true,
-                decoration: InputDecoration(
-                  hintText: "E-mail",
-                  hintStyle: kTextFieldStyle.copyWith(
-                    decoration: TextDecoration.none,
-                  ),
-                  enabledBorder: UnderlineInputBorder(
-                    borderSide: BorderSide(color: Colors.grey),
-                  ),
-                  focusedBorder: UnderlineInputBorder(
-                    borderSide: BorderSide(color: Colors.grey),
-                  ),
-                ),
-              ),
+              _buildInputField("E-mail"),
               SizedBox(
                 height: 10,
               ),
-              TextField(
-                style:
-                    kTextFieldStyle.copyWith(decoration: TextDecoration.none),
-                obscureText: true,
-                decoration: InputDecoration(
-                  hintText: "Password",
-                  hintStyle:
-                      kTextFieldStyle.copyWith(decoration: TextDecoration.none),
-                  enabledBorder: UnderlineInputBorder(
-                    borderSide: BorderSide(color: Colors.grey),
-                  ),
-                  focusedBorder: UnderlineInputBorder(
-                    borderSide: BorderSide(color: Colors.grey),
-                  ),
-                ),
-              ),
+              _buildInputField("Password"),
               SizedBox(
                 height: 10,
               ),
@@ -94,6 +63,25 @@ class _LoginState extends State<Login> {
               )
             ],
           ),
+        ),
+      ),
+    );
+  }
+
+  Widget _buildInputField(String hText) {
+    return TextField(
+      style: kTextFieldStyle.copyWith(decoration: TextDecoration.none),
+      autofocus: true,
+      decoration: InputDecoration(
+        hintText: hText,
+        hintStyle: kTextFieldStyle.copyWith(
+          decoration: TextDecoration.none,
+        ),
+        enabledBorder: UnderlineInputBorder(
+          borderSide: BorderSide(color: Colors.grey),
+        ),
+        focusedBorder: UnderlineInputBorder(
+          borderSide: BorderSide(color: Colors.grey),
         ),
       ),
     );

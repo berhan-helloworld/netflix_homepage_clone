@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:netflix_clone/data/logged_user.dart';
-import 'package:netflix_clone/screens/Home/widgets/continue_watching.dart';
-import 'package:netflix_clone/screens/Home/widgets/genre.dart';
-import 'package:netflix_clone/screens/Home/widgets/genre_list.dart';
-import 'package:netflix_clone/screens/Home/widgets/originals.dart';
-import 'package:netflix_clone/screens/Home/widgets/section_title.dart';
+import 'package:netflix_clone/views/Home/widgets/continue_watching.dart';
+import 'package:netflix_clone/views/Home/widgets/genre.dart';
+import 'package:netflix_clone/views/Home/widgets/genre_list.dart';
+import 'package:netflix_clone/views/Home/widgets/originals.dart';
+import 'package:netflix_clone/views/Home/widgets/section_title.dart';
 
 import '../../styles.dart';
 
@@ -24,15 +24,15 @@ class _HomeState extends State<Home> {
             padding: EdgeInsets.all(16),
             child: Column(
               children: <Widget>[
-                headerSection(context),
-                mainContent(),
+                _headerSection(context),
+                _mainContent(),
               ],
             ),
           ),
         ));
   }
 
-  Widget mainContent() {
+  Widget _mainContent() {
     return SingleChildScrollView(
       child: Column(
         children: <Widget>[
@@ -78,7 +78,7 @@ class _HomeState extends State<Home> {
   }
 }
 
-Widget headerSection(BuildContext context) {
+Widget _headerSection(BuildContext context) {
   return Container(
       height: MediaQuery.of(context).size.height / 2 - 50,
       decoration: BoxDecoration(

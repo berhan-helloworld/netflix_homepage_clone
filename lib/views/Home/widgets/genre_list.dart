@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:netflix_clone/screens/Home/widgets/section_title.dart';
+import 'package:netflix_clone/views/Home/widgets/section_title.dart';
 
 class GenreList extends StatelessWidget {
   final String title;

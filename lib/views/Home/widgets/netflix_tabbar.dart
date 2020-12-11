@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:netflix_clone/screens/Home/home.dart';
-import 'package:netflix_clone/screens/search/search_bar.dart';
+import 'package:netflix_clone/views/search/search_bar.dart';
+
+import '../home.dart';
 
 class NetflixTabBar extends StatelessWidget {
   @override

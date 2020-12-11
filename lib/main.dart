@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:netflix_clone/screens/Login/login.dart';
+import 'package:netflix_clone/views/Login/login.dart';
 
 void main() {
   runApp(MaterialApp(
